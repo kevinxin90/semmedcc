@@ -59,7 +59,7 @@ def load_data(data_folder):
                     cc_related[_item[5]][pred] = {}
                 if semantic_type not in cc_related[_item[5]][pred]:
                     cc_related[_item[5]][pred][semantic_type] = []
-                assoc = _item[4] + pred + str(_item[1]) + _item[5]
+                assoc = _item[5] + pred + str(_item[1]) + _item[4]
                 if assoc not in unique_assocs:
                     unique_assocs.add(assoc)
                     cc_related[_item[5]][pred][semantic_type].append({'pmid': _item[1].split(';'), 'umls': _item[4][5:]})
